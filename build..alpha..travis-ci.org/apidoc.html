@@ -1,0 +1,2183 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+    >weexpack (v0.4.0)</a>
+</h1>
+<h4>Weex pack tool</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.weexpack">module weexpack</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.CordovaExternalToolErrorContext">
+            function <span class="apidocSignatureSpan">weexpack.</span>CordovaExternalToolErrorContext
+            <span class="apidocSignatureSpan">(cmd, args, cwd)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.getVersion">
+            function <span class="apidocSignatureSpan">weexpack.</span>getVersion
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.init">
+            function <span class="apidocSignatureSpan">weexpack.</span>init
+            <span class="apidocSignatureSpan">(projectName = &#x27;&#x27;, configFile = &#x27;&#x27;)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.run">
+            function <span class="apidocSignatureSpan">weexpack.</span>run
+            <span class="apidocSignatureSpan">(platform = &#x27;&#x27;, options = {})</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.runAndroid">
+            function <span class="apidocSignatureSpan">weexpack.</span>runAndroid
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.runIOS">
+            function <span class="apidocSignatureSpan">weexpack.</span>runIOS
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.runWeb">
+            function <span class="apidocSignatureSpan">weexpack.</span>runWeb
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">weexpack.</span>CordovaExternalToolErrorContext.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">weexpack.</span>config</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">weexpack.</span>gitclone</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">weexpack.</span>gradle</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">weexpack.</span>market</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">weexpack.</span>npm</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">weexpack.</span>podfile</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">weexpack.</span>project</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">weexpack.</span>telemetry</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">weexpack.</span>validator</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.weexpack.CordovaExternalToolErrorContext">module weexpack.CordovaExternalToolErrorContext</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.CordovaExternalToolErrorContext.CordovaExternalToolErrorContext">
+            function <span class="apidocSignatureSpan">weexpack.</span>CordovaExternalToolErrorContext
+            <span class="apidocSignatureSpan">(cmd, args, cwd)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.weexpack.CordovaExternalToolErrorContext.prototype">module weexpack.CordovaExternalToolErrorContext.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.CordovaExternalToolErrorContext.prototype.toString">
+            function <span class="apidocSignatureSpan">weexpack.CordovaExternalToolErrorContext.prototype.</span>toString
+            <span class="apidocSignatureSpan">(isVerbose)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.weexpack.config">module weexpack.config</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.config.Config">
+            function <span class="apidocSignatureSpan">weexpack.config.</span>Config
+            <span class="apidocSignatureSpan">(properties, path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.config.ConfigResolver">
+            function <span class="apidocSignatureSpan">weexpack.config.</span>ConfigResolver
+            <span class="apidocSignatureSpan">(def)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">weexpack.config.</span>androidConfigResolver</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">weexpack.config.</span>iOSConfigResolver</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.weexpack.gitclone">module weexpack.gitclone</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.gitclone.clone">
+            function <span class="apidocSignatureSpan">weexpack.gitclone.</span>clone
+            <span class="apidocSignatureSpan">(git_url, git_ref, clone_dir)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.weexpack.gradle">module weexpack.gradle</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.gradle.applyPatch">
+            function <span class="apidocSignatureSpan">weexpack.gradle.</span>applyPatch
+            <span class="apidocSignatureSpan">(file, patch, isProject)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.gradle.makeBuildPatch">
+            function <span class="apidocSignatureSpan">weexpack.gradle.</span>makeBuildPatch
+            <span class="apidocSignatureSpan">(name, version, groupId, isProject)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.gradle.makeSettingsPatch">
+            function <span class="apidocSignatureSpan">weexpack.gradle.</span>makeSettingsPatch
+            <span class="apidocSignatureSpan">(name, projectDir)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.gradle.revokePatch">
+            function <span class="apidocSignatureSpan">weexpack.gradle.</span>revokePatch
+            <span class="apidocSignatureSpan">(file, patch)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.weexpack.market">module weexpack.market</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.market.apply">
+            function <span class="apidocSignatureSpan">weexpack.market.</span>apply
+            <span class="apidocSignatureSpan">(name, p)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.market.info">
+            function <span class="apidocSignatureSpan">weexpack.market.</span>info
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.market.publish">
+            function <span class="apidocSignatureSpan">weexpack.market.</span>publish
+            <span class="apidocSignatureSpan">(name, namespace, fullname, ali, version, extend)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">weexpack.market.</span>domain</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.weexpack.npm">module weexpack.npm</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.npm.fetchCache">
+            function <span class="apidocSignatureSpan">weexpack.npm.</span>fetchCache
+            <span class="apidocSignatureSpan">(npmName, version, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.npm.getLastestVersion">
+            function <span class="apidocSignatureSpan">weexpack.npm.</span>getLastestVersion
+            <span class="apidocSignatureSpan">(name, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.npm.publish">
+            function <span class="apidocSignatureSpan">weexpack.npm.</span>publish
+            <span class="apidocSignatureSpan">(tnpm, verbose, dir)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.npm.unpackTgz">
+            function <span class="apidocSignatureSpan">weexpack.npm.</span>unpackTgz
+            <span class="apidocSignatureSpan">(package_tgz, unpackTarget, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">weexpack.npm.</span>prefix</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.weexpack.podfile">module weexpack.podfile</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.podfile.applyPatch">
+            function <span class="apidocSignatureSpan">weexpack.podfile.</span>applyPatch
+            <span class="apidocSignatureSpan">(file, patch)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.podfile.makeBuildPatch">
+            function <span class="apidocSignatureSpan">weexpack.podfile.</span>makeBuildPatch
+            <span class="apidocSignatureSpan">(name, version)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.podfile.revokePatch">
+            function <span class="apidocSignatureSpan">weexpack.podfile.</span>revokePatch
+            <span class="apidocSignatureSpan">(file, patch)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.weexpack.project">module weexpack.project</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.project.createProject">
+            function <span class="apidocSignatureSpan">weexpack.project.</span>createProject
+            <span class="apidocSignatureSpan">(projectRoot, platform, opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.weexpack.telemetry">module weexpack.telemetry</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.telemetry.clear">
+            function <span class="apidocSignatureSpan">weexpack.telemetry.</span>clear
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.telemetry.hasUserOptedInOrOut">
+            function <span class="apidocSignatureSpan">weexpack.telemetry.</span>hasUserOptedInOrOut
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.telemetry.isCI">
+            function <span class="apidocSignatureSpan">weexpack.telemetry.</span>isCI
+            <span class="apidocSignatureSpan">(env)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.telemetry.isNoTelemetryFlag">
+            function <span class="apidocSignatureSpan">weexpack.telemetry.</span>isNoTelemetryFlag
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.telemetry.isOptedIn">
+            function <span class="apidocSignatureSpan">weexpack.telemetry.</span>isOptedIn
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.telemetry.showPrompt">
+            function <span class="apidocSignatureSpan">weexpack.telemetry.</span>showPrompt
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.telemetry.track">
+            function <span class="apidocSignatureSpan">weexpack.telemetry.</span>track
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.telemetry.turnOff">
+            function <span class="apidocSignatureSpan">weexpack.telemetry.</span>turnOff
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.telemetry.turnOn">
+            function <span class="apidocSignatureSpan">weexpack.telemetry.</span>turnOn
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.weexpack.validator">module weexpack.validator</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.validator.checkAndroid">
+            function <span class="apidocSignatureSpan">weexpack.validator.</span>checkAndroid
+            <span class="apidocSignatureSpan">(cwd)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.validator.checkIOS">
+            function <span class="apidocSignatureSpan">weexpack.validator.</span>checkIOS
+            <span class="apidocSignatureSpan">(cwd)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.validator.isOnLinux">
+            function <span class="apidocSignatureSpan">weexpack.validator.</span>isOnLinux
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.validator.isOnMac">
+            function <span class="apidocSignatureSpan">weexpack.validator.</span>isOnMac
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.validator.isOnWindows">
+            function <span class="apidocSignatureSpan">weexpack.validator.</span>isOnWindows
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weexpack.validator.isValidPackageName">
+            function <span class="apidocSignatureSpan">weexpack.validator.</span>isValidPackageName
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.weexpack" id="apidoc.module.weexpack">module weexpack</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.CordovaExternalToolErrorContext" id="apidoc.element.weexpack.CordovaExternalToolErrorContext">
+        function <span class="apidocSignatureSpan">weexpack.</span>CordovaExternalToolErrorContext
+        <span class="apidocSignatureSpan">(cmd, args, cwd)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CordovaExternalToolErrorContext(cmd, args, cwd) {
+    this.cmd = cmd;
+    // Helper field for readability
+    this.cmdShortName = path.basename(cmd);
+    this.args = args;
+    this.cwd = cwd;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.getVersion" id="apidoc.element.weexpack.getVersion">
+        function <span class="apidocSignatureSpan">weexpack.</span>getVersion
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getVersion() {
+  return require(&#x27;./package.json&#x27;).version
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.init" id="apidoc.element.weexpack.init">
+        function <span class="apidocSignatureSpan">weexpack.</span>init
+        <span class="apidocSignatureSpan">(projectName = &#x27;&#x27;, configFile = &#x27;&#x27;)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function init(projectName = &#x27;&#x27;, configFile = &#x27;&#x27;) {
+  if (projectName.match(/^[$A-Z_][0-9A-Z_-]*$/i)) {
+    initProject(projectName, configFile)
+  } else {
+    console.log(`  ${chalk.red(&#x27;Invalid project name:&#x27;)} ${chalk.yellow(projectName)}`)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+const Market = require(&#x27;./market&#x27;);
+const Cache = require(&#x27;../utils/cache&#x27;);
+const Path = require(&#x27;path&#x27;);
+module.exports = function (ali) {
+
+var dir = process.cwd();
+var xmlFilePath = Path.join(dir, &#x27;plugin.xml&#x27;);
+Cache.<span class="apidocCodeKeywordSpan">init</span>();
+if (!Fs.existsSync(xmlFilePath)) {
+  //新版本
+  var pkg = require(Path.join(dir,&#x22;./package.json&#x22;))
+  pkg.weexpack = &#x22;0.4.0&#x22;
+  if (ali) {
+    pkg.publishConfig = {
+      registry: &#x27;http://registry.npm.alibaba-inc.com&#x27;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.run" id="apidoc.element.weexpack.run">
+        function <span class="apidocSignatureSpan">weexpack.</span>run
+        <span class="apidocSignatureSpan">(platform = &#x27;&#x27;, options = {})</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function run(platform = &#x27;&#x27;, options = {}) {
+  switch (platform) {
+    case &#x27;android&#x27; : runAndroid(options); break;
+    case &#x27;ios&#x27;     : runIOS(options);     break;
+    case &#x27;web&#x27;     : runWeb(options);     break;
+
+    default : {
+      console.log(`  ${chalk.red(&#x27;Unknown platform:&#x27;)} ${chalk.yellow(platform)}`)
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    args,
+    options: {
+      projectName,
+    }
+  })
+
+  generator.destinationRoot(projectName)
+  generator.<span class="apidocCodeKeywordSpan">run</span>()
+}
+
+module.exports = init
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.runAndroid" id="apidoc.element.weexpack.runAndroid">
+        function <span class="apidocSignatureSpan">weexpack.</span>runAndroid
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function runAndroid(options) {
+  console.log(` =&#x3e; ${chalk.blue.bold(&#x27;npm install&#x26;build&#x27;)}`)
+  utils.buildJS()
+    .then(()=&#x3e; {
+      return new Promise((resolve, reject)=&#x3e; {
+        copy(&#x27;./dist/&#x27;, &#x27;platforms/android/app/src/main/assets/dist&#x27;, {overwrite: true}, function (err) {
+          if (err) return reject(err);
+          else resolve();
+        })
+      });
+    })
+    .then(()=&#x3e; {
+      startJSServer()
+      return {options}
+    })
+    .then(prepareAndroid)
+    .then(resolveConfig)
+    .then(findAndroidDevice)
+    .then(chooseDevice)
+    .then(reverseDevice)
+
+    .then(buildApp)
+    .then(installApp)
+    .then(runApp)
+    .catch((err) =&#x3e; {
+      if (err) {
+        console.log(chalk.red(&#x27;Error:&#x27;, err));
+      }
+    })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.runIOS" id="apidoc.element.weexpack.runIOS">
+        function <span class="apidocSignatureSpan">weexpack.</span>runIOS
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function runIOS(options) {
+  utils.checkAndInstallForIosDeploy()
+    .then(utils.buildJS)
+    .then(()=&#x3e;{
+      return utils.exec(&#x27;rsync  -r -q ./dist/* platforms/ios/bundlejs/&#x27;)
+    })
+    .then(()=&#x3e; {
+      startJSServer()
+      return {options}
+    }).then(prepareIOS)
+     .then(installDep)
+    .then(findIOSDevice)
+    .then(chooseDevice)
+    .then(buildApp)
+    .then(runApp)
+    .catch((err) =&#x3e; {
+      if (err) {
+        try {
+          if(err.stderr){
+            console.log(err.stderr)
+          }
+          else{
+            console.log(err);
+          }
+          if(err.output)console.log(err.output.join(&#x27;\n&#x27;))
+        }catch(e){
+          console.log(e);
+        }
+      }
+    })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.runWeb" id="apidoc.element.weexpack.runWeb">
+        function <span class="apidocSignatureSpan">weexpack.</span>runWeb
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function runWeb(options) {
+  if (!checkWebEnv(process.cwd())) {
+    console.log()
+    console.log(chalk.red(&#x27;  Not available web environment !&#x27;))
+    console.log()
+    console.log(`  You should run ${chalk.blue(&#x27;weexpack init&#x27;)} first`)
+    return
+  }
+
+  console.log()
+  console.log(` =&#x3e; ${chalk.blue.bold(&#x27;Starting web service&#x27;)}`)
+
+  util.buildJS().then(function () {
+    let exist = startJSServer();
+    //没办法无法预知服务器啥时候完成
+    setTimeout(function () {
+      preview()
+    }, exist ? 0 : 2000)
+
+  })
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.weexpack.CordovaExternalToolErrorContext" id="apidoc.module.weexpack.CordovaExternalToolErrorContext">module weexpack.CordovaExternalToolErrorContext</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.CordovaExternalToolErrorContext.CordovaExternalToolErrorContext" id="apidoc.element.weexpack.CordovaExternalToolErrorContext.CordovaExternalToolErrorContext">
+        function <span class="apidocSignatureSpan">weexpack.</span>CordovaExternalToolErrorContext
+        <span class="apidocSignatureSpan">(cmd, args, cwd)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CordovaExternalToolErrorContext(cmd, args, cwd) {
+    this.cmd = cmd;
+    // Helper field for readability
+    this.cmdShortName = path.basename(cmd);
+    this.args = args;
+    this.cwd = cwd;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.weexpack.CordovaExternalToolErrorContext.prototype" id="apidoc.module.weexpack.CordovaExternalToolErrorContext.prototype">module weexpack.CordovaExternalToolErrorContext.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.CordovaExternalToolErrorContext.prototype.toString" id="apidoc.element.weexpack.CordovaExternalToolErrorContext.prototype.toString">
+        function <span class="apidocSignatureSpan">weexpack.CordovaExternalToolErrorContext.prototype.</span>toString
+        <span class="apidocSignatureSpan">(isVerbose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function (isVerbose) {
+    if(isVerbose) {
+        return &#x27;External tool \&#x27;&#x27; + this.cmdShortName + &#x27;\&#x27;&#x27; +
+            &#x27;\nCommand full path: &#x27; + this.cmd + &#x27;\nCommand args: &#x27; + this.args +
+            (typeof this.cwd !== &#x27;undefined&#x27; ? &#x27;\nCommand cwd: &#x27; + this.cwd : &#x27;&#x27;);
+    }
+
+    return this.cmdShortName;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+           return f;
+        }
+        return null;
+    }).filter(function (f) {
+        return f !== null;
+    });
+    if(file &#x26;&#x26; file[0] ) {
+      raw = fs.readFileSync(file[0]).<span class="apidocCodeKeywordSpan">toString</span>(&#x27;utf8&#x27;).replace(/cordova-cli/
+g, cordova_lib.binname);
+      cordova.emit(&#x27;results&#x27;, raw);
+    }
+
+    return Q();
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.weexpack.config" id="apidoc.module.weexpack.config">module weexpack.config</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.config.Config" id="apidoc.element.weexpack.config.Config">
+        function <span class="apidocSignatureSpan">weexpack.config.</span>Config
+        <span class="apidocSignatureSpan">(properties, path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Config {
+  constructor(properties, path) {
+    this.path = path;
+    if (properties instanceof ConfigResolver) {
+      let map = {};
+      this.properties = [];
+      for (let key in properties.def) {
+        for (let propName in properties.def[key]) {
+          if (!map[propName]) {
+            this.properties.push({
+              name: propName,
+              desc: properties.def[key].desc || &#x27;enter your &#x27; + propName + &#x27;:&#x27;
+            });
+            map[propName] = true;
+          }
+        }
+      }
+    }
+    else {
+      this.properties = properties.split(&#x27;,&#x27;).map(prop=&#x3e; {
+        var splits = prop.split(&#x27;|&#x27;);
+        return {
+          name: splits[0],
+          desc: splits[1] || &#x27;enter your &#x27; + splits[0] + &#x27;:&#x27;
+        }
+      });
+    }
+  }
+
+  getConfig() {
+    return new Promise((resolve, reject)=&#x3e; {
+      let config = {};
+      try {
+        config = require(this.path);
+      }
+      catch (e) {
+      }
+      var questions = [], answers = {};
+      console.log(&#x27;============build config============&#x27;)
+      this.properties.forEach(function (prop) {
+        if (config[prop.name] !== undefined &#x26;&#x26; config[prop.name] != &#x27;&#x27;) {
+          answers[prop.name] = config[prop.name];
+          console.log(prop.name + &#x27;=&#x3e;&#x27; + answers[prop.name]);
+        }
+        else {
+          questions.push({
+            type: &#x27;input&#x27;,
+            message: prop.desc,
+            name: prop.name
+          })
+        }
+      });
+      if (questions.length &#x3e; 0) {
+        Inquirer.prompt(questions)
+          .then((answers) =&#x3e; {
+            Object.assign(config, answers);
+            Fs.writeFileSync(this.path, JSON.stringify(config, null, 4))
+            resolve(config);
+          })
+      }
+      else {
+        console.log(&#x27;if you want to change build config.please modify &#x27; + Path.basename(this.path));
+        resolve(config)
+      }
+    })
+
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.config.ConfigResolver" id="apidoc.element.weexpack.config.ConfigResolver">
+        function <span class="apidocSignatureSpan">weexpack.config.</span>ConfigResolver
+        <span class="apidocSignatureSpan">(def)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class ConfigResolver {
+  constructor(def) {
+    this.def = def;
+  }
+
+  resolve(config, basePath) {
+    basePath = basePath || process.cwd();
+    for (let path in this.def) {
+      if (this.def.hasOwnProperty(path)) {
+        let targetPath = Path.join(basePath, path);
+        let source = Fs.readFileSync(targetPath).toString();
+        for (let key in this.def[path]) {
+          if (this.def[path].hasOwnProperty(key)) {
+            let configDef = this.def[path][key];
+            if (Array.isArray(configDef)) {
+              configDef.forEach((def)=&#x3e; {
+                source = _resolveConfigDef(source, def, config, key)
+              })
+            }
+            else {
+              source = _resolveConfigDef(source, configDef, config, key);
+            }
+          }
+        }
+        Fs.writeFileSync(targetPath, source);
+      }
+
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.weexpack.gitclone" id="apidoc.module.weexpack.gitclone">module weexpack.gitclone</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.gitclone.clone" id="apidoc.element.weexpack.gitclone.clone">
+        function <span class="apidocSignatureSpan">weexpack.gitclone.</span>clone
+        <span class="apidocSignatureSpan">(git_url, git_ref, clone_dir)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function clone(git_url, git_ref, clone_dir){
+
+    var needsGitCheckout = !!git_ref;
+    if (!shell.which(&#x27;git&#x27;)) {
+        return Q.reject(new Error(&#x27;&#x22;git&#x22; command line tool is not installed: make sure it is accessible on your PATH.&#x27;));
+    }
+
+    // If no clone_dir is specified, create a tmp dir which git will clone into.
+    var tmp_dir = clone_dir;
+    if(!tmp_dir){
+        tmp_dir = path.join(os.tmpdir(), &#x27;git&#x27;, String((new Date()).valueOf()));
+    }
+    shell.rm(&#x27;-rf&#x27;, tmp_dir);
+    shell.mkdir(&#x27;-p&#x27;, tmp_dir);
+
+    var cloneArgs = [&#x27;clone&#x27;];
+    if(!needsGitCheckout) {
+        // only get depth of 1 if there is no branch/commit specified
+        cloneArgs.push(&#x27;--depth=1&#x27;);
+    }
+    cloneArgs.push(git_url, tmp_dir);
+    return superspawn.spawn(&#x27;git&#x27;, cloneArgs)
+    .then(function() {
+        if (needsGitCheckout){
+            return superspawn.spawn(&#x27;git&#x27;, [&#x27;checkout&#x27;, git_ref], {
+                cwd: tmp_dir
+            });
+        }
+    })
+    .then(function(){
+        events.emit(&#x27;log&#x27;, &#x27;Repository &#x22;&#x27; + git_url + &#x27;&#x22; checked out to git ref &#x22;&#x27; + (git_ref || &#x27;master&#x27;) + &#x27;&#x22;.&#x27;);
+        return tmp_dir;
+    })
+    .fail(function (err) {
+        shell.rm(&#x27;-rf&#x27;, tmp_dir);
+        return Q.reject(err);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var tmp_subidr = &#x27;tmp_cordova_git_&#x27; + process.pid + &#x27;_&#x27; + (new Date()).valueOf();
+var tmp_dir = path.join(cordova_util.libDirectory, &#x27;tmp&#x27;, tmp_subidr);
+shell.rm(&#x27;-rf&#x27;, tmp_dir);
+shell.mkdir(&#x27;-p&#x27;, tmp_dir);
+
+return Q().then(function () {
+  var branchToCheckout = branch || &#x27;master&#x27;;
+  return gitclone.<span class="apidocCodeKeywordSpan">clone</span>(git_url, branchToCheckout, tmp_dir);
+}).then(function () {
+
+  return tmp_dir;
+}).fail(function (err) {
+  shell.rm(&#x27;-rf&#x27;, tmp_dir);
+  return Q.reject(err);
+});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.weexpack.gradle" id="apidoc.module.weexpack.gradle">module weexpack.gradle</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.gradle.applyPatch" id="apidoc.element.weexpack.gradle.applyPatch">
+        function <span class="apidocSignatureSpan">weexpack.gradle.</span>applyPatch
+        <span class="apidocSignatureSpan">(file, patch, isProject)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function applyPatch(file, patch, isProject) {
+  var content = fs.readFileSync(file, &#x27;utf8&#x27;);
+
+  if(content.match(patch.findPattern || patch.patch)){
+    content = content.replace(patch.findPattern || patch.patch, &#x27;&#x27;)
+  }
+
+  if(patch.findProjectPattern){
+    content = content.replace(patch.findProjectPattern, &#x27;&#x27;)
+  }
+
+
+  if(isProject){
+    content = content.replace(patch.pattern, match =&#x3e; `${match}${patch.projectPatch}`)
+  }
+  else{
+    content = content.replace(patch.pattern, match =&#x3e; `${match}${patch.patch}`)
+  }
+
+  fs.writeFileSync(file, content)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    installPList(dir, projectPath, option.ios.plist||{})
+}
+
+if(option.ios&#x26;&#x26;option.ios.type==&#x22;pod&#x22;){
+
+  var iosVersion = option.ios&#x26;&#x26;option.ios.version || version
+  const buildPatch = podfile.makeBuildPatch(name, iosVersion);
+  podfile.<span class="apidocCodeKeywordSpan">applyPatch</span>(path.join(dir,&#x22;Podfile&#x22;), buildPatch);
+  console.log(name +&#x22; install success in ios project&#x22;)
+}
+else{
+  npmHelper.fetchCache(pluginName, version, function (packageTGZ, packageDir) {
+    npmHelper.unpackTgz(packageTGZ, path.join(process.cwd(),&#x22;weexplugins&#x22;,pluginName), function(){
+      var targetPath = path.join(process.cwd(), &#x22;weexplugins&#x22;, pluginName);
+      const buildPatch = podfile.makeBuildPatch(targetPath, &#x22;&#x22;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.gradle.makeBuildPatch" id="apidoc.element.weexpack.gradle.makeBuildPatch">
+        function <span class="apidocSignatureSpan">weexpack.gradle.</span>makeBuildPatch
+        <span class="apidocSignatureSpan">(name, version, groupId, isProject)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function makeBuildPatch(name, version, groupId, isProject) {
+  return {
+    pattern: /\t*dependencies {\n/,
+    projectPatch:`    compile project(&#x27;:${name}&#x27;)\n`,
+    patch: `    compile &#x27;${groupId}:${name}:${version}&#x27;\n`,
+    findPattern:new RegExp(&#x27;\t*compile\\s+\&#x27;&#x27;+groupId+&#x27;:&#x27;+name+&#x27;.*\&#x27;\\n&#x27;,&#x22;g&#x22;),
+    findProjectPattern:new RegExp(&#x27;\t*compile\\s+project\\(\&#x27;:&#x27;+name+&#x27;\&#x27;\\).*\\n&#x27;,&#x22;g&#x22;)
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+    installPList(dir, projectPath, option.ios.plist||{})
+}
+
+if(option.ios&#x26;&#x26;option.ios.type==&#x22;pod&#x22;){
+
+  var iosVersion = option.ios&#x26;&#x26;option.ios.version || version
+  const buildPatch = podfile.<span class="apidocCodeKeywordSpan">makeBuildPatch</span>(name, iosVersion);
+  podfile.applyPatch(path.join(dir,&#x22;Podfile&#x22;), buildPatch);
+  console.log(name +&#x22; install success in ios project&#x22;)
+}
+else{
+  npmHelper.fetchCache(pluginName, version, function (packageTGZ, packageDir) {
+    npmHelper.unpackTgz(packageTGZ, path.join(process.cwd(),&#x22;weexplugins&#x22;,pluginName), function(){
+      var targetPath = path.join(process.cwd(), &#x22;weexplugins&#x22;, pluginName);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.gradle.makeSettingsPatch" id="apidoc.element.weexpack.gradle.makeSettingsPatch">
+        function <span class="apidocSignatureSpan">weexpack.gradle.</span>makeSettingsPatch
+        <span class="apidocSignatureSpan">(name, projectDir)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function makeSettingsPatch(name, projectDir) {
+
+<span class="apidocCodeCommentSpan">  /*
+   * Fix for Windows
+   * Backslashes is the escape character and will result in
+   * an invalid path in settings.gradle
+   * https://github.com/rnpm/rnpm/issues/113
+   */
+</span>  if (isWin) {
+    projectDir = projectDir.replace(/\\/g, &#x27;/&#x27;);
+  }
+
+  return {
+    pattern: &#x27;\n&#x27;,
+    patch: `include &#x27;:${name}&#x27;\n` +
+    `project(&#x27;:${name}&#x27;).projectDir = ` +
+    `new File(&#x27;${projectDir}&#x27;)\n`,
+    findPattern:new RegExp(&#x22;include &#x27;:&#x22;+name+&#x22;&#x27;\\nproject\\(&#x27;:&#x22;+name+&#x22;&#x27;\\).projectDir = new File\\(&#x27;&#x22;+projectDir+&#x22;&#x27;\\)\\n&#x22;,&#x22;g&#x22;)
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      console.log(name +&#x22; install success in android project&#x22;)
+    }
+    else {
+npmHelper.fetchCache(pluginName, version, function (packageTGZ, packageDir) {
+  npmHelper.unpackTgz(packageTGZ, path.join(process.cwd(),&#x22;weexplugins&#x22;,pluginName), function(){
+    var targetPath = path.join(process.cwd(), &#x22;weexplugins&#x22;, pluginName);
+    //
+    const settingPatch = gradle.<span class="apidocCodeKeywordSpan">makeSettingsPatch</span>(pluginName, targetPath)
+    gradle.applyPatch(path.join(dir,&#x22;settings.gradle&#x22;), settingPatch);
+
+    const buildPatch = gradle.makeBuildPatch(name, version, option.android.groupId||&#x22;&#x22;);
+    gradle.applyPatch(path.join(dir,&#x22;build.gradle&#x22;), buildPatch, true);
+    console.log(name +&#x22; install success in android project&#x22;)
+  })
+})
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.gradle.revokePatch" id="apidoc.element.weexpack.gradle.revokePatch">
+        function <span class="apidocSignatureSpan">weexpack.gradle.</span>revokePatch
+        <span class="apidocSignatureSpan">(file, patch)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function revokePatch(file, patch) {
+
+  var content = fs.readFileSync(file, &#x27;utf8&#x27;);
+  var p = content.match(patch.findProjectPattern)
+
+   content = content.replace(patch.findPattern||patch.patch, &#x27;&#x27;).replace(patch.findProjectPattern,&#x27;&#x27;)
+  fs.writeFileSync(file,content)
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if(!fs.existsSync(path.join(dir,&#x22;Podfile&#x22;))){
+    console.log(&#x22;can&#x27;t find Podfile file&#x22;);
+    return ;
+  }
+  var name = option.ios&#x26;&#x26;option.ios.name?option.ios.name:pluginName
+  var iosVersion =  option.ios&#x26;&#x26;option.ios.version || version
+  const buildPatch = podfile.makeBuildPatch(name, iosVersion);
+  podfile.<span class="apidocCodeKeywordSpan">revokePatch</span>(path.join(dir,&#x22;Podfile&#x22;), buildPatch);
+  console.log(name +&#x22; has removed in ios project&#x22;)
+}
+else if (utils.isAndroidProject(dir)){
+  var name = option.android&#x26;&#x26;option.android.name?option.android.name:pluginName
+  var androidVersion =  option.android&#x26;&#x26;option.android.version || version
+  const buildPatch = gradle.makeBuildPatch(name, androidVersion, option.android.groupId ||&#x22;&#x22;);
+  gradle.revokePatch(path.join(dir,&#x22;build.gradle&#x22;), buildPatch);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.weexpack.market" id="apidoc.module.weexpack.market">module weexpack.market</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.market.apply" id="apidoc.element.weexpack.market.apply">
+        function <span class="apidocSignatureSpan">weexpack.market.</span>apply
+        <span class="apidocSignatureSpan">(name, p)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">apply = function (name, p) {
+  return new Promise((resolve, reject)=&#x3e; {
+    post(exports.domain + &#x27;/json/sync/apply.json?name=&#x27; + name + &#x27;&#x26;p=&#x27; + !!p).then(function (res) {
+      if (res.success) {
+        resolve(res.data);
+      }
+      else {
+        throw new Error(&#x27;apply plugin fullname error!&#x27;);
+      }
+
+    }).catch(function (e) {
+      console.error(chalk.red(`\nMarket apply failed! Please retry ${chalk.blue(&#x27;weexpack plugin publish&#x27;)}\n`));
+      console.error(chalk.grey(&#x27;error info:&#x27;+e));
+    })
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    // Remove empty, null or undefined strings from arguments
+    for (var property in arguments) {
+        var val = arguments[property];
+        if (!val || val.length === 0) {
+            delete arguments.property;
+        }
+    }
+    insight.track.<span class="apidocCodeKeywordSpan">apply</span>(insight, arguments);
+}
+
+function turnOn() {
+    insight.optOut = false;
+}
+
+function turnOff() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.market.info" id="apidoc.element.weexpack.market.info">
+        function <span class="apidocSignatureSpan">weexpack.market.</span>info
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">info = function (name) {
+  if (_mapper[name]) {
+    return Promise.resolve(_mapper[name]);
+  }
+  else {
+    return new Promise((resolve, reject)=&#x3e; {
+      post(exports.domain + &#x27;/json/sync/info.json?name=&#x27; + name).then(function (res) {
+        if (res.success) {
+          _mapper[name] = res.data;
+          try {
+            Fs.writeFileSync(Path.join(TMP_DIR, CACHE_FILE_NAME), JSON.stringify(_mapper, null, 4))
+          } catch (e) {
+            console.error(&#x27;registry map save error&#x27;);
+          }
+          resolve(res.data)
+        }
+        else {
+          if (res.data &#x26;&#x26; res.data.code === &#x27;10001&#x27;) {
+            reject(&#x27;plugin &#x22;&#x27; + name + &#x27;&#x22; not found&#x27;)
+          }
+          else {
+            reject(&#x27;market error:&#x27; + JSON.stringify(res));
+          }
+        }
+
+      }, function (e) {
+        reject(e.toString());
+      })
+    })
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+console.log();
+    }
+  }
+
+  if (plugin.version &#x3e; Cache.get(&#x27;latestVersion&#x27;, &#x27;0.0.0&#x27;)) {
+    let deps = plugin.getDependencies()
+    if (deps.length &#x3e; 0) {
+Promise.all(deps.map(d=&#x3e;Market.<span class="apidocCodeKeywordSpan">info</span>(d.id))).then(function (data) {
+
+  deps = data.map((info)=&#x3e; {
+    return {name: info.name, fullname: info.fullname}
+  });
+  Cache.deps = deps;
+  _publish(plugin, deps, ali)
+})
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.market.publish" id="apidoc.element.weexpack.market.publish">
+        function <span class="apidocSignatureSpan">weexpack.market.</span>publish
+        <span class="apidocSignatureSpan">(name, namespace, fullname, ali, version, extend)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">publish = function (name, namespace, fullname, ali, version, extend) {
+  extend = extend || {}
+  return new Promise(function (resolve, reject) {
+    let url = exports.domain + &#x27;/json/sync/sync.json?name=&#x27; + name +  &#x27;&#x26;fullname=&#x27; + fullname + &#x27;&#x26;p=&#x27; + !!ali+(namespace?&#x27;&#x26;namespace
+=&#x27; + namespace :&#x27;&#x27;);
+    if(extend&#x26;&#x26;extend.weexpack == &#x22;0.4.0&#x22;){
+      url += &#x22;&#x26;wpv=4&#x22;
+    }
+
+    post(url, extend).then(function (res) {
+      if (res.success) {
+        console.log();
+        console.log(chalk.yellow(&#x27;plugin [&#x27; + name + &#x27;@&#x27; + version + &#x27;] publish success! sync to market maybe need a few minutes
+.&#x27;));
+        console.log(chalk.yellow(`you can visit ${exports.domain} see your plugin. if not exist you can retry ${chalk.blue(&#x27;weexpack
+ plugin publish&#x27;)}`))
+        console.log();
+        resolve()
+      }
+      else if (res.data.code == 10004) {
+        console.error(chalk.red(`Market sync rejected! Namespace unmatched!`));
+      }
+    }).catch(function (e) {
+      console.error(chalk.red(`Market sync failed! Please retry ${chalk.blue(&#x27;weexpack plugin publish&#x27;)}`));
+      console.error(chalk.grey(&#x27;error info:&#x27;+e));
+    })
+  })
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    _publish(plugin, [], ali)
+  }
+
+
+}
+else if (Cache.get(&#x27;nameInfo&#x27;)) {
+  let nameInfo = Cache.get(&#x27;nameInfo&#x27;);
+  Market.<span class="apidocCodeKeywordSpan">publish</span>(plugin.id, nameInfo.namespace || &#x27;&#x27;, nameInfo.fullname, ali
+, plugin.version).then(function () {
+
+  });
+}
+};
+function _publish(plugin, deps, ali) {
+
+var package = {};
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.weexpack.npm" id="apidoc.module.weexpack.npm">module weexpack.npm</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.npm.fetchCache" id="apidoc.element.weexpack.npm.fetchCache">
+        function <span class="apidocSignatureSpan">weexpack.npm.</span>fetchCache
+        <span class="apidocSignatureSpan">(npmName, version, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fetchCache = function (npmName, version, callback){
+
+  npm.load(function() {
+    npm.commands.cache([&#x27;add&#x27;, (npmName + &#x27;@&#x27; + version)],  function (error, result) {
+      if(error){
+        throw  new Error(error)
+      }
+      else {
+
+        var packageDir = path.resolve(npm.cache, result.name, result.version, &#x27;package&#x27;);
+        var packageTGZ = path.resolve(npm.cache, result.name, result.version, &#x27;package.tgz&#x27;);
+        callback(packageTGZ, packageDir)
+      }
+
+
+    })
+  })
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * Invokes &#x22;npm cache add,&#x22; and then returns a promise that resolves to a directory containing the downloaded,
+ * or cached package.
+ * @param packageName - name of an npm package
+ * @param packageVersion - requested version (not a version range)
+ */
+function cachePackage(packageName, packageVersion, callback) {
+
+  utils.<span class="apidocCodeKeywordSpan">fetchCache</span>(packageName, packageVersion, callback)
+
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.npm.getLastestVersion" id="apidoc.element.weexpack.npm.getLastestVersion">
+        function <span class="apidocSignatureSpan">weexpack.npm.</span>getLastestVersion
+        <span class="apidocSignatureSpan">(name, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getLastestVersion = function (name, callback){
+  var trynum = 0
+  npm.load(function() {
+
+    var load = function(npmName){
+        npm.commands.info([npmName, &#x22;version&#x22;], true, function (error, result) {
+          if (error&#x26;&#x26;trynum==0) {
+            trynum++
+            if(npmName == &#x22;weex-gcanvas&#x22;){
+              var  prefix = &#x22;weex-plugin--&#x22;
+            }
+            else {
+              var  prefix = &#x22;weex-plugin-&#x22;
+            }
+            load(prefix+npmName)
+          }
+          else if(error&#x26;&#x26;trynum!==0){
+            throw  new Error(error)
+          }
+          else {
+            var version;
+            for (var p in result) {
+              version = p;
+            }
+            callback(version)
+          }
+
+        })
+
+
+    }
+
+
+      load(name);
+
+
+
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  version = temp[1]
+}
+
+var dir = process.cwd();
+
+//get the lastest version
+if(!version){
+  npmHelper.<span class="apidocCodeKeywordSpan">getLastestVersion</span>(pluginName, function(version){
+    utils.isNewVersionPlugin(pluginName, version, function(result){
+       if(result){
+         handleInstall(dir, pluginName, version,  result)
+         if(result.pluginDependencies){
+           for(var pn in result.pluginDependencies){
+             install(pn, result.pluginDependencies[pn])
+           }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.npm.publish" id="apidoc.element.weexpack.npm.publish">
+        function <span class="apidocSignatureSpan">weexpack.npm.</span>publish
+        <span class="apidocSignatureSpan">(tnpm, verbose, dir)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function publish(tnpm, verbose, dir) {
+  let pb = new ProgressBar(3000, &#x27;publish&#x27;, &#x27;uploading...&#x27;);
+  let cmd = tnpm ? &#x27;tnpm&#x27; : &#x27;npm&#x27;;
+  return new Promise(function (resolve, reject) {
+    let npm = child_process.exec(cmd + &#x27; publish&#x27;, {cwd: dir || process.cwd()}, function (error, stdout, stderr) {
+      pb.complete(function () {
+        if (error) {
+          console.log();
+          let match=stderr.toString().replace(/npm ERR! /g,&#x27;&#x27;).match(/\n\n([\s\w\W]+?)\n\n/);
+          if(match&#x26;&#x26;match[1]){
+            console.error(Chalk.red(match[1]))
+          }
+          else{
+            console.error(Chalk.red(stderr.toString()))
+          }
+          console.log();
+         return  resolve(false);
+        }
+        resolve(true);
+      })
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    _publish(plugin, [], ali)
+  }
+
+
+}
+else if (Cache.get(&#x27;nameInfo&#x27;)) {
+  let nameInfo = Cache.get(&#x27;nameInfo&#x27;);
+  Market.<span class="apidocCodeKeywordSpan">publish</span>(plugin.id, nameInfo.namespace || &#x27;&#x27;, nameInfo.fullname, ali
+, plugin.version).then(function () {
+
+  });
+}
+};
+function _publish(plugin, deps, ali) {
+
+var package = {};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.npm.unpackTgz" id="apidoc.element.weexpack.npm.unpackTgz">
+        function <span class="apidocSignatureSpan">weexpack.npm.</span>unpackTgz
+        <span class="apidocSignatureSpan">(package_tgz, unpackTarget, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unpackTgz = function (package_tgz, unpackTarget, callback) {
+
+    var extractOpts = { type: &#x27;Directory&#x27;, path: unpackTarget, strip: 1 };
+
+    fs.createReadStream(package_tgz)
+        .on(&#x27;error&#x27;, function (err) {
+          console.warn(&#x27;Unable to open tarball &#x27; + package_tgz + &#x27;: &#x27; + err);
+        })
+        .pipe(zlib.createUnzip())
+        .on(&#x27;error&#x27;, function (err) {
+          console.warn(&#x27;Error during unzip for &#x27; + package_tgz + &#x27;: &#x27; + err);
+        })
+        .pipe(tar.Extract(extractOpts))
+        .on(&#x27;error&#x27;, function(err) {
+          console.warn(&#x27;Error during untar for &#x27; + package_tgz + &#x27;: &#x27; + err);
+
+        })
+        .on(&#x27;end&#x27;, function(result){
+          callback(result)
+        });
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var iosVersion = option.ios&#x26;&#x26;option.ios.version || version
+  const buildPatch = podfile.makeBuildPatch(name, iosVersion);
+  podfile.applyPatch(path.join(dir,&#x22;Podfile&#x22;), buildPatch);
+  console.log(name +&#x22; install success in ios project&#x22;)
+}
+else{
+  npmHelper.fetchCache(pluginName, version, function (packageTGZ, packageDir) {
+    npmHelper.<span class="apidocCodeKeywordSpan">unpackTgz</span>(packageTGZ, path.join(process.cwd(),&#x22;weexplugins&#x22;,pluginName
+), function(){
+      var targetPath = path.join(process.cwd(), &#x22;weexplugins&#x22;, pluginName);
+      const buildPatch = podfile.makeBuildPatch(targetPath, &#x22;&#x22;);
+      podfile.applyPatch(path.join(dir,&#x22;Podfile&#x22;), buildPatch);
+      console.log(name +&#x22; install success in ios project&#x22;)
+    })
+  })
+}
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.weexpack.podfile" id="apidoc.module.weexpack.podfile">module weexpack.podfile</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.podfile.applyPatch" id="apidoc.element.weexpack.podfile.applyPatch">
+        function <span class="apidocSignatureSpan">weexpack.podfile.</span>applyPatch
+        <span class="apidocSignatureSpan">(file, patch)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function applyPatch(file, patch) {
+  var content = fs.readFileSync(file, &#x27;utf8&#x27;);
+
+
+  if(content.match(patch.findPattern)){
+    content = content.replace(patch.findPattern, &#x27;&#x27;)
+  }
+
+  content = content.replace(patch.pattern, match =&#x3e; `${patch.patch}${match}`)
+
+  fs.writeFileSync(file, content)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    installPList(dir, projectPath, option.ios.plist||{})
+}
+
+if(option.ios&#x26;&#x26;option.ios.type==&#x22;pod&#x22;){
+
+  var iosVersion = option.ios&#x26;&#x26;option.ios.version || version
+  const buildPatch = podfile.makeBuildPatch(name, iosVersion);
+  podfile.<span class="apidocCodeKeywordSpan">applyPatch</span>(path.join(dir,&#x22;Podfile&#x22;), buildPatch);
+  console.log(name +&#x22; install success in ios project&#x22;)
+}
+else{
+  npmHelper.fetchCache(pluginName, version, function (packageTGZ, packageDir) {
+    npmHelper.unpackTgz(packageTGZ, path.join(process.cwd(),&#x22;weexplugins&#x22;,pluginName), function(){
+      var targetPath = path.join(process.cwd(), &#x22;weexplugins&#x22;, pluginName);
+      const buildPatch = podfile.makeBuildPatch(targetPath, &#x22;&#x22;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.podfile.makeBuildPatch" id="apidoc.element.weexpack.podfile.makeBuildPatch">
+        function <span class="apidocSignatureSpan">weexpack.podfile.</span>makeBuildPatch
+        <span class="apidocSignatureSpan">(name, version)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function makeBuildPatch(name, version) {
+  var patch = &#x22;&#x22;
+  if(version){
+    patch = `    pod &#x27;${name}&#x27;, &#x27;${version}&#x27;\n`
+
+  }
+  else {
+    patch = `    pod &#x27;${name}&#x27;\n`
+  }
+
+  return {
+    pattern: /\t*pod\s+\&#x27;\w+\&#x27;\s*,?.*\n/,
+    patch: patch,
+    findPattern:new RegExp(&#x27;\\t*pod\\s+\&#x27;&#x27;+name+&#x27;\&#x27;\\s*,?.*\\n&#x27;,&#x22;g&#x22;)
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+    installPList(dir, projectPath, option.ios.plist||{})
+}
+
+if(option.ios&#x26;&#x26;option.ios.type==&#x22;pod&#x22;){
+
+  var iosVersion = option.ios&#x26;&#x26;option.ios.version || version
+  const buildPatch = podfile.<span class="apidocCodeKeywordSpan">makeBuildPatch</span>(name, iosVersion);
+  podfile.applyPatch(path.join(dir,&#x22;Podfile&#x22;), buildPatch);
+  console.log(name +&#x22; install success in ios project&#x22;)
+}
+else{
+  npmHelper.fetchCache(pluginName, version, function (packageTGZ, packageDir) {
+    npmHelper.unpackTgz(packageTGZ, path.join(process.cwd(),&#x22;weexplugins&#x22;,pluginName), function(){
+      var targetPath = path.join(process.cwd(), &#x22;weexplugins&#x22;, pluginName);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.podfile.revokePatch" id="apidoc.element.weexpack.podfile.revokePatch">
+        function <span class="apidocSignatureSpan">weexpack.podfile.</span>revokePatch
+        <span class="apidocSignatureSpan">(file, patch)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function revokePatch(file, patch) {
+  fs.writeFileSync(file, fs
+      .readFileSync(file, &#x27;utf8&#x27;)
+      .replace(patch.findPattern, &#x27;&#x27;)
+  );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if(!fs.existsSync(path.join(dir,&#x22;Podfile&#x22;))){
+    console.log(&#x22;can&#x27;t find Podfile file&#x22;);
+    return ;
+  }
+  var name = option.ios&#x26;&#x26;option.ios.name?option.ios.name:pluginName
+  var iosVersion =  option.ios&#x26;&#x26;option.ios.version || version
+  const buildPatch = podfile.makeBuildPatch(name, iosVersion);
+  podfile.<span class="apidocCodeKeywordSpan">revokePatch</span>(path.join(dir,&#x22;Podfile&#x22;), buildPatch);
+  console.log(name +&#x22; has removed in ios project&#x22;)
+}
+else if (utils.isAndroidProject(dir)){
+  var name = option.android&#x26;&#x26;option.android.name?option.android.name:pluginName
+  var androidVersion =  option.android&#x26;&#x26;option.android.version || version
+  const buildPatch = gradle.makeBuildPatch(name, androidVersion, option.android.groupId ||&#x22;&#x22;);
+  gradle.revokePatch(path.join(dir,&#x22;build.gradle&#x22;), buildPatch);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.weexpack.project" id="apidoc.module.weexpack.project">module weexpack.project</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.project.createProject" id="apidoc.element.weexpack.project.createProject">
+        function <span class="apidocSignatureSpan">weexpack.project.</span>createProject
+        <span class="apidocSignatureSpan">(projectRoot, platform, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createProject = function (projectRoot, platform, opts) {
+  var msg;
+
+
+
+  opts = opts || {};
+
+
+  // The &#x22;platforms&#x22; dir is safe to delete, it&#x27;s almost equivalent to
+  // cordova platform rm &#x3c;list of all platforms&#x3e;
+  var platformsDir = projectRoot
+
+
+  return Q().then(function() {
+    return downloadProject(projectRoot, platform,  opts);
+  }).then(function(dir) {
+
+    var platformPath = path.join(projectRoot, &#x27;Weexplugin&#x27;);
+    var platformAlreadyAdded = fs.existsSync(platformPath);
+
+    if (platformAlreadyAdded) {
+      throw new CordovaError(&#x27;plugin project &#x27; + platform + &#x27; already added.&#x27;);
+      console.log(&#x27;plugin project &#x27; + platform + &#x27; already added.&#x27;)
+    }
+
+    var tempDir =&#x22;&#x22;
+    if(platform == &#x22;ios&#x22;){
+      tempDir = path.join(dir,&#x22;bin&#x22;,&#x22;templates&#x22;)
+    }
+    else {
+      tempDir = dir;
+    }
+
+    shell.mkdir(&#x27;-p&#x27;, platformPath);
+    copyProject(tempDir, platformPath)
+    if(platform == &#x22;ios&#x22; &#x26;&#x26; opts.ali == true){
+      changeSource(platformPath)
+    }
+
+    events.emit(&#x27;log&#x27;, &#x27; &#x27;);
+    events.emit(&#x27;log&#x27;, &#x27;add plugin&#x27;  + platform + &#x27; project ...&#x27;);
+    console.log(&#x27;create weexplugin project  success...&#x27;)
+
+
+  });
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.weexpack.telemetry" id="apidoc.module.weexpack.telemetry">module weexpack.telemetry</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.telemetry.clear" id="apidoc.element.weexpack.telemetry.clear">
+        function <span class="apidocSignatureSpan">weexpack.telemetry.</span>clear
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function clear() {
+    insight.optOut = undefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.telemetry.hasUserOptedInOrOut" id="apidoc.element.weexpack.telemetry.hasUserOptedInOrOut">
+        function <span class="apidocSignatureSpan">weexpack.telemetry.</span>hasUserOptedInOrOut
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hasUserOptedInOrOut() {
+    return !(insight.optOut === undefined);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.telemetry.isCI" id="apidoc.element.weexpack.telemetry.isCI">
+        function <span class="apidocSignatureSpan">weexpack.telemetry.</span>isCI
+        <span class="apidocSignatureSpan">(env)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isCI(env) {
+    return !!env.CI;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.telemetry.isNoTelemetryFlag" id="apidoc.element.weexpack.telemetry.isNoTelemetryFlag">
+        function <span class="apidocSignatureSpan">weexpack.telemetry.</span>isNoTelemetryFlag
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isNoTelemetryFlag(args) {
+    return args.indexOf(&#x27;--no-telemetry&#x27;) &#x3e; -1;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.telemetry.isOptedIn" id="apidoc.element.weexpack.telemetry.isOptedIn">
+        function <span class="apidocSignatureSpan">weexpack.telemetry.</span>isOptedIn
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isOptedIn() {
+    return !insight.optOut;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.telemetry.showPrompt" id="apidoc.element.weexpack.telemetry.showPrompt">
+        function <span class="apidocSignatureSpan">weexpack.telemetry.</span>showPrompt
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function showPrompt() {
+
+    var deferred = Q.defer();
+
+    var msg = &#x22;May weexpack anonymously report usage statistics to improve the tool over time?&#x22;;
+    insight.askPermission(msg, function (unused, optIn) {
+        var EOL = require(&#x27;os&#x27;).EOL;
+        if (optIn) {
+            console.log(EOL + &#x22;Thanks for opting into telemetry to help us improve weexpack.&#x22;);
+            track(&#x27;telemetry&#x27;, &#x27;on&#x27;, &#x27;via-cli-prompt-choice&#x27;, &#x27;successful&#x27;);
+        } else {
+            console.log(EOL + &#x22;You have been opted out of telemetry. To change this, run: weexpack telemetry on.&#x22;);
+            // Always track telemetry opt-outs! (whether opted-in or opted-out)
+            track(&#x27;telemetry&#x27;, &#x27;off&#x27;, &#x27;via-cli-prompt-choice&#x27;, &#x27;successful&#x27;);
+        }
+
+        deferred.resolve(optIn);
+    });
+
+    return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.telemetry.track" id="apidoc.element.weexpack.telemetry.track">
+        function <span class="apidocSignatureSpan">weexpack.telemetry.</span>track
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function track() {
+    // Remove empty, null or undefined strings from arguments
+    for (var property in arguments) {
+        var val = arguments[property];
+        if (!val || val.length === 0) {
+            delete arguments.property;
+        }
+    }
+    insight.track.apply(insight, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    shouldCollectTelemetry = collectTelemetry;
+    if(isTelemetryCmd) {
+        return Q();
+    }
+    return cli(inputArgs);
+}).then(function () {
+    if (shouldCollectTelemetry &#x26;&#x26; !isTelemetryCmd) {
+        telemetry.<span class="apidocCodeKeywordSpan">track</span>(cmd, subcommand, &#x27;successful&#x27;);
+    }
+    // call cb with error as arg if something failed
+    cb(null);
+}).fail(function (err) {
+    if (shouldCollectTelemetry &#x26;&#x26; !isTelemetryCmd) {
+        telemetry.track(cmd, subcommand, &#x27;unsuccessful&#x27;);
+    }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.telemetry.turnOff" id="apidoc.element.weexpack.telemetry.turnOff">
+        function <span class="apidocSignatureSpan">weexpack.telemetry.</span>turnOff
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function turnOff() {
+    insight.optOut = true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// turn telemetry on or off
+try {
+    if (turnOn) {
+        telemetry.turnOn();
+        console.log(&#x22;Thanks for opting into telemetry to help us improve weexpack.&#x22;);
+    } else {
+        telemetry.<span class="apidocCodeKeywordSpan">turnOff</span>();
+        console.log(&#x22;You have been opted out of telemetry. To change this, run: weexpack telemetry on.&#x22;);
+    }
+} catch (ex) {
+    cmdSuccess = false;
+}
+
+// track or not track ?, that is the question
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.telemetry.turnOn" id="apidoc.element.weexpack.telemetry.turnOn">
+        function <span class="apidocSignatureSpan">weexpack.telemetry.</span>turnOn
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function turnOn() {
+    insight.optOut = false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var turnOn = subcommand === &#x27;on&#x27; ? true : false;
+var cmdSuccess = true;
+
+// turn telemetry on or off
+try {
+    if (turnOn) {
+        telemetry.<span class="apidocCodeKeywordSpan">turnOn</span>();
+        console.log(&#x22;Thanks for opting into telemetry to help us improve weexpack.&#x22;);
+    } else {
+        telemetry.turnOff();
+        console.log(&#x22;You have been opted out of telemetry. To change this, run: weexpack telemetry on.&#x22;);
+    }
+} catch (ex) {
+    cmdSuccess = false;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.weexpack.validator" id="apidoc.module.weexpack.validator">module weexpack.validator</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.validator.checkAndroid" id="apidoc.element.weexpack.validator.checkAndroid">
+        function <span class="apidocSignatureSpan">weexpack.validator.</span>checkAndroid
+        <span class="apidocSignatureSpan">(cwd)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function checkAndroid(cwd) {
+  return fs.existsSync(path.join(cwd, &#x27;platforms/android/gradlew&#x27;))
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * Prepare
+ * @param {Object} options
+ */
+function prepareAndroid({options}) {
+  return new Promise((resolve, reject) =&#x3e; {
+const rootPath = process.cwd()
+
+if (!utils.<span class="apidocCodeKeywordSpan">checkAndroid</span>(rootPath)) {
+  console.log(rootPath)
+  console.log(chalk.red(&#x27;  Android project not found !&#x27;))
+  console.log()
+  console.log(`  You should run ${chalk.blue(&#x27;weexpack create&#x27;)} or ${chalk.blue(&#x27;weexpack platform add android&#
+x27;)}  first`)
+  reject()
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.validator.checkIOS" id="apidoc.element.weexpack.validator.checkIOS">
+        function <span class="apidocSignatureSpan">weexpack.validator.</span>checkIOS
+        <span class="apidocSignatureSpan">(cwd)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function checkIOS(cwd) {
+  // return fs.existsSync(path.join(cwd, &#x27;ios/playground&#x27;))
+  return fs.existsSync(path.join(cwd, &#x27;platforms/ios&#x27;))
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+ * Prepare
+ * @param {Object} options
+ */
+function prepareIOS({options}) {
+return new Promise((resolve, reject) =&#x3e; {
+  const rootPath = process.cwd()
+  if (!utils.<span class="apidocCodeKeywordSpan">checkIOS</span>(rootPath)) {
+    console.log()
+    console.log(chalk.red(&#x27;  iOS project not found !&#x27;))
+    console.log()
+    console.log(`  You should run ${chalk.blue(&#x27;weexpack create&#x27;)} or ${chalk.blue(&#x27;weexpack platform add ios&#x27
+;)} first`)
+    reject()
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.validator.isOnLinux" id="apidoc.element.weexpack.validator.isOnLinux">
+        function <span class="apidocSignatureSpan">weexpack.validator.</span>isOnLinux
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isOnLinux() {
+  return process.platform === &#x27;linux&#x27;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.validator.isOnMac" id="apidoc.element.weexpack.validator.isOnMac">
+        function <span class="apidocSignatureSpan">weexpack.validator.</span>isOnMac
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isOnMac() {
+  return process.platform === &#x27;darwin&#x27;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.validator.isOnWindows" id="apidoc.element.weexpack.validator.isOnWindows">
+        function <span class="apidocSignatureSpan">weexpack.validator.</span>isOnWindows
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isOnWindows() {
+  return /^win/.test(process.platform)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weexpack.validator.isValidPackageName" id="apidoc.element.weexpack.validator.isValidPackageName">
+        function <span class="apidocSignatureSpan">weexpack.validator.</span>isValidPackageName
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isValidPackageName(name) {
+  return name.match(/^[$A-Z_][0-9A-Z_$]*$/i);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
